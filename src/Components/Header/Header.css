@@ -1,0 +1,133 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+    gap: 20px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+@media (max-width:490px) {
+    .header {
+        gap: 10px;
+    }
+}
+
+
+.header .links ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .links ul a {
+    font-family: "Poppins", sans-serif;
+    color: var(--dark);
+    font-weight: 500;
+    transition: all .2s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header .links ul hr {
+    width: 70%;
+    margin: auto;
+    border: none;
+    outline: none;
+    height: .9px;
+    background-color: var(--primary);
+    display: none;
+}
+
+.header .links .active {
+    color: var(--primary)
+}
+
+.header .links .active hr {
+    display: block;
+}
+
+.header button {
+    background-color: var(--primary);
+    color: white;
+}
+
+@media (max-width:490px) {
+    /* .header button {
+        padding: 10px 10px;
+        font-size: 12px;
+    } */
+}
+
+.header .bar {
+    display: none;
+}
+
+@media (max-width:880px) {
+    .header .bar {
+        display: block;
+    }
+
+    .header .links {
+        /* display: none; */
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        top: 100%;
+        right: 0;
+        transform: translateX(110%);
+        transition: var(--transition);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .header .links ul {
+        gap: 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: var(--transition);
+    }
+}
+
+.header .res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+}
+
+.header .profileImg {
+    width: 46px;
+    border-radius: 50%;
+}
+
+.header .profileDropdown {
+    width: 20px;
+    transition: var(--transition);
+}
+
+.header .dropDown {
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(251, 251, 251);
+    top: calc(100% + 10px);
+    right: 0px;
+    /* padding: 10px; */
+    width: 150px;
+    height: 0px;
+    overflow: hidden;
+    transition: var(--transition);
+    padding: 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+.header .dropDown li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}

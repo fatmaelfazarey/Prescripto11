@@ -1,0 +1,68 @@
+:root {
+    --img-background: rgb(234 239 255);
+    --available-color: rgb(34 197 94);
+}
+
+.topDoctors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.topDoctors .eachDoctor {
+    border: 1px solid rgb(201 216 255);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.topDoctors .eachDoctor:hover {
+    transform: translateY(-10px);
+}
+
+
+.topDoctors .eachDoctor img {
+    width: 100%;
+    background-color: var(--img-background)
+}
+
+.topDoctors .doctorInfo {
+    padding: 1rem;
+}
+
+.topDoctors .doctorInfo .section-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.topDoctors .doctorInfo .section-title,
+.topDoctors .doctorInfo .section-subTitle {
+    text-align: start;
+    margin: 0px;
+}
+
+
+.topDoctors .areAvailable {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: var(--available-color);
+}
+
+.topDoctors .areAvailable .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--available-color);
+}
+
+.topDoctors button {
+    background-color: var(--img-background);
+    margin: 30px auto 0px auto;
+    color: rgba(75, 85, 99, 1);
+    font-weight: 400;
+    font-size: 1.2rem;
+}

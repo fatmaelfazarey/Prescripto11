@@ -1,0 +1,94 @@
+.Banner .banner-content {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    padding-left: 80px;
+    padding-right: 80px;
+
+}
+
+.Banner .banner-content .left {
+    width: 70%;
+}
+
+.Banner p {
+    font-size: 52px;
+    line-height: 90px;
+    font-weight: 700;
+}
+
+.Banner button {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.Banner .right {
+    width: 40%;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Banner .right img {
+    width: 70%;
+}
+
+@media (max-width:1200px) {
+    .Banner p {
+        font-size: 40px;
+        line-height: 80px;
+    }
+}
+
+@media (max-width:880px) {
+    .Banner p {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    .Banner .right {
+        width: 50%;
+        right: 50px;
+
+    }
+
+    .Banner .banner-content .left {
+        width: 80%;
+    }
+
+    .Banner .banner-content {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+}
+
+@media (max-width:600px) {
+    .Banner p {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .Banner .right {
+        width: 65%;
+        right: 10px;
+
+    }
+
+    .Banner .banner-content .left {
+        width: 75%;
+    }
+
+    .Banner .banner-content {
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+}

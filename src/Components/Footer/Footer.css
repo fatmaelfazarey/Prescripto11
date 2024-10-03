@@ -1,0 +1,49 @@
+.footer .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer .firstDiv {
+    flex: 2;
+    max-width: 450px;
+    min-width: 300px;
+}
+
+.footer .links .text {
+    text-align: start;
+    font-size: 14px;
+    color: var(--sub-title);
+    margin: 0;
+    line-height: 9px;
+}
+
+.footer .firstDiv .text {
+    line-height: 27px;
+}
+
+.footer .links>div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer .section-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.footer .copyRight {
+    margin: 20px auto 20px auto;
+    color: rgba(31, 41, 55, 1);
+}
+
+.footer .Link-Col .text:hover {
+    color: var(--primary);
+}

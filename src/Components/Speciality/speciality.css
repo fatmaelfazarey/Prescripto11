@@ -1,0 +1,59 @@
+#speciality,
+#speciality .specialityParent,
+#speciality .specialityParent>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#speciality,
+#speciality .specialityParent>a {
+    flex-direction: column;
+}
+
+#speciality .specialityParent {
+    flex-direction: row;
+    gap: 16px;
+    /* 1rem */
+    overflow: scroll;
+    padding: 0px 10px;
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 10px;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /*IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    align-items: flex-start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#speciality .specialityParent ::-webkit-scrollbar {
+    display: none;
+}
+
+#speciality .specialityParent>a:hover {
+    transform: translateY(-10px);
+    transition: var(--transition);
+}
+
+#speciality .specialityParent>a span {
+    font-size: 14px;
+}
+
+#speciality .specialityParent img {
+    width: 6rem;
+    margin-bottom: 4px;
+}
+
+@media (max-width:640px) {
+    #speciality .specialityParent img {
+        width: 4rem;
+    }
+}
+
+#speciality p {
+    margin: 20px auto 50px auto;
+    max-width: 570px;
+}

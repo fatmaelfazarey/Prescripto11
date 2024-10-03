@@ -1,0 +1,197 @@
+.home {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 650px;
+    /* height: 600px; */
+    display: flex;
+    align-items: center;
+    z-index: -10;
+    /* position: relative; */
+
+}
+
+.home .welcom {
+    padding: 0 10px 0 20px;
+    background-color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.home .welcom .left {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 20px;
+    justify-content: flex-start;
+    /* position: relative; */
+}
+
+.home .welcom .left .imgs {
+    display: flex;
+    flex-direction: row;
+}
+
+.home .welcom .left h3 {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 80px;
+    min-width: 440px;
+}
+
+@media (max-width:1260px) {
+    .home .welcom .left h3 {
+        line-height: 50px;
+    }
+
+    .home {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 600px;
+
+    }
+}
+
+.home .welcom .left p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+
+}
+
+.home .welcom .left .imgs>img {
+    width: 46px;
+    border-radius: 50%;
+}
+
+.home .welcom .left .imgs>img:nth-child(2) {
+    margin: 0px -20px;
+}
+
+
+.home .welcom .flexImgText {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home button {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.home button:hover {
+    transform: scale(1.07);
+}
+
+.home .welcom .right {
+    width: 55%;
+    min-width: 550px;
+    position: absolute;
+    bottom: -4px;
+    right: 40px;
+
+}
+
+.home .welcom .right img {
+    width: 100%;
+    /* position: absolute;
+    bottom: 0px;*/
+    /* width: 105%; */
+    /* right: 10px; */
+}
+
+@media (max-width:1200px) {
+    .home .welcom .right img {
+        width: 90%;
+
+    }
+
+    .home .welcom .right {
+        width: 50%;
+        right: 0px;
+        display: flex;
+        justify-content: flex-end;
+        bottom: 0px;
+
+    }
+}
+
+/* @media (max-width:990px) {
+    .home .welcom .right {
+        right: 100px;
+
+    }
+
+    .home .welcom .right img {
+        width: 115%;
+    }
+} */
+
+@media (max-width:880px) {
+    .home {
+        height: calc(100vh - 70px);
+        /* height: 640p; */
+    }
+
+    .home .welcom {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .home .welcom>.left {
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .bookAppointmentBtn {
+        margin: auto;
+    }
+
+    .home .welcom .flexImgText {
+        display: none;
+
+    }
+
+    .home .welcom .right {
+        width: 100%;
+        justify-content: center;
+        min-width: 300px;
+    }
+
+    .home .welcom .right img {
+        max-width: 480px;
+    }
+}
+
+@media (max-width:550px) {
+    .home .welcom>.left {
+        padding: 80px 10px;
+    }
+
+    .home .welcom .left h3 {
+        font-size: 35px;
+        min-width: 0;
+
+    }
+
+    .home .welcom .right img {
+        width: 100%;
+    }
+}
