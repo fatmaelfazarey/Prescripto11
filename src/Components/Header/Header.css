@@ -77,11 +77,14 @@
         position: absolute;
         background-color: rgb(255, 255, 255);
         padding: 20px;
-        top: 100%;
+        top: 99%;
         right: 0;
         transform: translateX(110%);
         transition: var(--transition);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+        z-index: 100;
+        width: 102%;
+        height: calc(100vh - 67px);
     }
 
     .header .links ul {

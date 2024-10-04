@@ -11,7 +11,7 @@ const Speciality = () => {
             <div className='specialityParent'>
                 {specialityData.map((item, i) => (
                     <Link onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })} key={i} to={`/doctors/${item.speciality}`}>
-                        <img src={item.image} alt='' />
+                        <img src={item.image} alt='' loading='lazy'/>
                         <span className='section-subTitle '>{item.speciality}</span>
                     </Link>
                 ))}
