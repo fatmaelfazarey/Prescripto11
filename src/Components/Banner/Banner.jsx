@@ -15,7 +15,7 @@ const Banner = () => {
                     <button onClick={() => { navigate('/login'); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}>Create acount</button>
                 </div>
                 <div className='right'>
-                    <img src={assets.appointment_img} alt='' loading='lazy'/>
+                    <img src={assets.appointment_img} alt='' />
                 </div>
             </div>
         </section >

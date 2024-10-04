@@ -83,7 +83,7 @@ export const company = [
 export const getInTouch = [
     {
         title: 'Phone',
-        // url: '+201156267730',
+        url: '+201156267730',
     },
     {
         title: 'GitHub',
@@ -95,7 +95,7 @@ export const getInTouch = [
     },
     {
         title: 'Email',
-        // url: 'fatmamohamed58001@gmail.com'
+        url: 'fatmamohamed58001@gmail.com'
     }
 ]
 // export const logoimg = <img src={logo} />;
@@ -202,7 +202,7 @@ export const doctors = [
         _id: 'doc6',
         name: 'Dr. Andrew Williams',
         image: doc6,
-        speciality: 'Gastroenterologist',
+        speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
@@ -286,7 +286,7 @@ export const doctors = [
         _id: 'doc12',
         name: 'Dr. Patrick Harris',
         image: doc12,
-        speciality: 'Gastroenterologist',
+        speciality: 'Neurologist',
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',

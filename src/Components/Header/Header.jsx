@@ -17,7 +17,7 @@ const Header = () => {
         },
         {
             text: 'ALLDOCTORS',
-            url: '/doctors',
+            url: '/doctors/:speciality',
         },
         {
             text: 'ABOUT',
@@ -89,7 +89,7 @@ const Header = () => {
 
     return (
         <header className='header'>
-            <div className='logo' onClick={() => navigate('/')}>
+            <div className='logo'>
                 <img src={assets.logo} alt='logo' />
             </div>
             <div className='links'>
@@ -108,7 +108,6 @@ const Header = () => {
                 {
                     registrationStatus ?
                         <>
-
                             <img src={assets.profile_pic} alt='profile image' className='profileImg' />
                             <img src={assets.dropdown_icon} alt='dropdown' className='profileDropdown' onClick={() => ShowdropDown()} />
                             <ul className='dropDown'>
@@ -118,7 +117,6 @@ const Header = () => {
                                     ))
                                 }
                             </ul>
-
                             <div className='bar' onClick={() => showLinks()}>
                                 <BarsIcon />
                             </div>

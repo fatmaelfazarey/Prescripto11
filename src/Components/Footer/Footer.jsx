@@ -9,7 +9,7 @@ const Footer = () => {
             <div className='links p-top-bottom-100 '>
                 <div className='firstDiv'>
                     <div className='logo'>
-                        <img src={assets.logo} alt='logo' loading='lazy'/>
+                        <img src={assets.logo} alt='logo' />
                     </div>
                     <p className='text section-subTitle'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                 </div>
@@ -17,7 +17,7 @@ const Footer = () => {
                     <p className='section-title'>COMPANY</p>
                     {
                         company.map((item, i) => (
-                            <Link to={item.url} className='text section-subTitle' key={i} target='blank'>{item.title}</Link>
+                            <Link to={item.url} className='text section-subTitle' key={i}>{item.title}</Link>
                         ))
                     }
                 </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <p className='section-title'>GET IN TOUCH</p>
                     {
                         getInTouch.map((item, i) => (
-                            <Link to={item.url} className='text section-subTitle' key={i} target='blank'>{item.title}</Link>
+                            <Link to={item.url} className='text section-subTitle' key={i}>{item.title}</Link>
                         ))
                     }
                 </div>

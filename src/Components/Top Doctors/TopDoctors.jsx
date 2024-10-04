@@ -16,7 +16,7 @@ const TopDoctors = () => {
                 {
                     doctors.slice(0, 10).map((item, i) => (
                         <div key={i} className='eachDoctor' onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); navigate(`/appointment/${item._id}`); }}>
-                            <img src={item.image} alt='' loading='lazy' />
+                            <img src={item.image} alt='' />
                             <div className='doctorInfo'>
                                 <div className='areAvailable'>
                                     <p className='circle'></p>
@@ -28,7 +28,7 @@ const TopDoctors = () => {
                         </div>
                     ))}
             </div>
-            <button onClick={() => { navigate('/doctors'); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}>See More</button>
+            <button onClick={() => { navigate('/doctors/doctor_id'); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}>See More</button>
         </section >
     )
 }
