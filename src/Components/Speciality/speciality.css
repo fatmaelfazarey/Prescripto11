@@ -1,17 +1,20 @@
 #speciality,
-#speciality .specialityParent,
 #speciality .specialityParent>a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#speciality,
-#speciality .specialityParent>a {
     flex-direction: column;
 }
 
+
+#speciality .specialityParent>a {
+    flex: 1;
+}
+
 #speciality .specialityParent {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
     flex-direction: row;
     gap: 16px;
     /* 1rem */
@@ -29,7 +32,7 @@
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-#speciality .specialityParent ::-webkit-scrollbar {
+#speciality .specialityParent::-webkit-scrollbar {
     display: none;
 }
 
@@ -56,4 +59,8 @@
 #speciality p {
     margin: 20px auto 50px auto;
     max-width: 570px;
+}
+
+#speciality .section-subTitle {
+    text-align: center;
 }

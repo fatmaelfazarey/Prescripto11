@@ -1,6 +1,7 @@
 :root {
     --img-background: rgb(234 239 255);
     --available-color: rgb(34 197 94);
+    --border-1px: 1px solid rgb(201 216 255);
 }
 
 .topDoctors {
@@ -11,48 +12,67 @@
 }
 
 
-.topDoctors .eachDoctor {
-    border: 1px solid rgb(201 216 255);
+.topDoctors .eachDoctor,
+.allDoctors .eachDoctor,
+.relatedDocs .eachDoctor {
+    border: var(--border-1px);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.topDoctors .eachDoctor:hover {
+.topDoctors .eachDoctor:hover,
+.allDoctors .eachDoctor:hover,
+.relatedDocs .eachDoctor:hover {
     transform: translateY(-10px);
 }
 
 
-.topDoctors .eachDoctor img {
+.topDoctors .eachDoctor img,
+.allDoctors .eachDoctor img,
+.relatedDocs .eachDoctor img {
     width: 100%;
-    background-color: var(--img-background)
+    background-color: var(--img-background);
+
 }
 
-.topDoctors .doctorInfo {
+.topDoctors .doctorInfo,
+.allDoctors .doctorInfo,
+.relatedDocs .doctorInfo {
     padding: 1rem;
 }
 
-.topDoctors .doctorInfo .section-title {
+.topDoctors .doctorInfo .section-title,
+.allDoctors .doctorInfo .section-title,
+.relatedDocs .doctorInfo .section-title {
     font-size: 1.125rem;
     line-height: 1.75rem;
 }
 
 .topDoctors .doctorInfo .section-title,
-.topDoctors .doctorInfo .section-subTitle {
+.topDoctors .doctorInfo .section-subTitle,
+.allDoctors .doctorInfo .section-title,
+.allDoctors .doctorInfo .section-subTitle,
+.relatedDocs .doctorInfo .section-title,
+.relatedDocs .doctorInfo .section-subTitle {
     text-align: start;
     margin: 0px;
 }
 
 
-.topDoctors .areAvailable {
+.topDoctors .areAvailable,
+.allDoctors .areAvailable,
+.relatedDocs .areAvailable {
     display: flex;
     gap: 5px;
     align-items: center;
     color: var(--available-color);
 }
 
-.topDoctors .areAvailable .circle {
+.topDoctors .areAvailable .circle,
+.allDoctors .areAvailable .circle,
+.relatedDocs .areAvailable .circle {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -65,4 +85,81 @@
     color: rgba(75, 85, 99, 1);
     font-weight: 400;
     font-size: 1.2rem;
+}
+
+
+/****** All Docttors Page  ******/
+.allDoctors {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.allDoctorsPage .section-subTitle {
+    text-align: start;
+    margin: 20px auto;
+}
+
+.allDoctorsPage .left,
+.allDoctorsPage .left>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.allDoctorsPage .filter,
+.allDoctorsPage .left a {
+    border: 1px solid rgb(209 213 219);
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.allDoctorsPage .left a:hover {
+    background-color: rgb(226 229 255);
+}
+
+@media (max-width:490px) {
+    .allDoctors {
+        flex-direction: column;
+    }
+
+    .allDoctorsPage .left a {
+        width: 100%;
+    }
+}
+
+.allDoctorsPage .right {
+    width: 100%;
+}
+
+.allDoctorsPage .filter {
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: none;
+    width: fit-content;
+    margin: 0 0 10px 0;
+}
+
+@media (max-width:490px) {
+    .allDoctors {
+        flex-direction: column;
+    }
+
+    .allDoctorsPage .left>div {
+        width: 100%;
+        display: none;
+    }
+
+    .allDoctorsPage .filter {
+        display: block;
+        width: fit-content;
+    }
+}
+
+.topDoctors .section-subTitle,
+.relatedDocs .section-subTitle {
+    text-align: center;
 }

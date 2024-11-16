@@ -30,7 +30,7 @@
 .Banner .right {
     width: 40%;
     position: absolute;
-    right: 80px;
+
     bottom: 0;
     display: flex;
     justify-content: flex-end;
@@ -38,6 +38,19 @@
 
 .Banner .right img {
     width: 70%;
+}
+
+.Banner .rightEn {
+    right: 80px;
+}
+
+.imgRight {
+    right: 100%;
+    transform: translateX(109%);
+}
+
+.imgRTL {
+    transform: rotateY(180deg);
 }
 
 @media (max-width:1200px) {
@@ -55,8 +68,10 @@
 
     .Banner .right {
         width: 50%;
-        right: 50px;
 
+    }
+    .Banner .rightEn {
+        right: 50px;
     }
 
     .Banner .banner-content .left {
@@ -78,8 +93,11 @@
 
     .Banner .right {
         width: 65%;
-        right: 10px;
+    
 
+    }
+    .Banner .rightEn {
+        right: 10px;
     }
 
     .Banner .banner-content .left {

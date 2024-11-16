@@ -1,0 +1,190 @@
+.myAppointment {}
+
+.myAppointment>.section-subTitle {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 50px 0 10px 0;
+}
+
+.myAppointment .eachAppointment {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px 0;
+    gap: 20px;
+
+
+
+}
+
+.myAppointment .eachAppointment .img {
+    max-width: 180px;
+    min-width: 100px;
+
+}
+
+.myAppointment .eachAppointment .img img {
+    width: 100%;
+    background-color: var(--img-background);
+}
+
+.imgAndDetails {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.myAppointment .eachAppointment .appointmentDetails {
+    flex: 1;
+    min-width: 210px;
+}
+
+.myAppointment .eachAppointment .appointmentDetails>* {
+    /* margin-bottom: 4px; */
+}
+
+.myAppointment .eachAppointment .appointmentDetails .name {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27.72px;
+    color: rgba(38, 38, 38, 1);
+}
+
+.myAppointment .eachAppointment .appointmentDetails p,
+.myAppointment .eachAppointment .appointmentDetails span {
+    font-weight: 400;
+    font-size: 14px;
+    /* line-height: 22.68px; */
+    color: var(--sub-title);
+}
+
+.myAppointment .eachAppointment .appointmentDetails span {
+
+    font-size: 16px;
+}
+
+.myAppointment .eachAppointment .appointmentDetails .address {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22.68px;
+    color: var(--sub-title);
+    margin: 5px 0;
+}
+
+.myAppointment .eachAppointment .appointmentDetails .date {
+    font-weight: 600;
+    line-height: 22.68px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.myAppointment .eachAppointment .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.myAppointment .eachAppointment .btns button {
+    border: 1px solid rgba(186, 186, 186, 1);
+    background-color: transparent;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(75, 85, 99, 1);
+    border-radius: 4px;
+    max-width: 210px;
+    min-width: 160px;
+    width: 100%;
+    transition: var(--transition);
+    cursor: pointer;
+
+}
+
+.myAppointment .eachAppointment .btns button img {
+    max-width: 5rem;
+    max-height: 1.25rem;
+}
+
+.myAppointment .eachAppointment .btns .payWay {
+    display: none;
+
+}
+
+.myAppointment .eachAppointment .btns .payWay:hover {
+    background-color: rgb(243 244 246);
+}
+
+.myAppointment .eachAppointment .btns .pay:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white !important;
+}
+
+.myAppointment .eachAppointment .btns .cancel:hover {
+    background-color: rgb(239 68 68);
+    border-color: rgb(239 68 68);
+    color: white !important;
+}
+
+
+@media (max-width:780px) {
+    .myAppointment .eachAppointment {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .myAppointment .eachAppointment>* {
+        width: 100%;
+    }
+
+    .myAppointment .eachAppointment .btns {
+        align-items: flex-end;
+        /* width: fit-content; */
+    }
+}
+
+@media (max-width:540px) {
+
+    /* .myAppointment .eachAppointment .imgAndDetails {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .myAppointment .eachAppointment .img {
+        max-width: none; 
+        min-width: none;
+        width: 80%; */
+    /* text-align: center;
+    margin: auto;
+}
+
+*/
+    .imgAndDetails {
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+/***             **/
+.myAppointment .noAppointment {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.myAppointment .noAppointment .section-subTitle {
+    margin: 0px;
+}
+
+.myAppointment .noAppointment img {
+    width: 300px;
+}

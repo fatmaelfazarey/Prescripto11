@@ -1,14 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { assets } from '../../assets/assets.js'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 import './Header.css';
 import BarsIcon from '../Bars Icon/BarsIcon.jsx';
+import { AppContext } from '../../Context/AppContext';
+
+
+// import { AppContext } from './Context/AppContext';
+// import { image } from '../../Pages/MyProfile/MyProfile.jsx';
 
 const Header = () => {
     const [checkWidthState, setCheckWidthState] = useState(true);
-    const [registrationStatus, setRegistrationStatus] = useState(true);
+    // const [registrationStatus, setRegistrationStatus] = useState(true);
     const [checkDropdown, setCheckDropdown] = useState(true);
     const navigate = useNavigate();
+    const { userData } = useContext(AppContext);
+    const { registrationStatus } = useContext(AppContext);
+    const { setRegistrationStatus } = useContext(AppContext);
+    const [iconState, setIconState] = useState(true);
+    const { darkMode } = useContext(AppContext);
+    const { pathname } = useLocation();
+    const { language } = useContext(AppContext);
+    const { t } = useContext(AppContext);
 
     const links = [
         {
@@ -17,7 +30,7 @@ const Header = () => {
         },
         {
             text: 'ALLDOCTORS',
-            url: '/doctors/:speciality',
+            url: '/doctors',
         },
         {
             text: 'ABOUT',
@@ -47,6 +60,7 @@ const Header = () => {
     function showLinks() {
         let header = document.getElementsByClassName('header')[0];
         let links = document.getElementsByClassName('links')[0];
+
         if (!checkDropdown) {
             ShowdropDown();
         }
@@ -54,11 +68,14 @@ const Header = () => {
             setCheckWidthState(false);
             header.setAttribute("style", "overflow:visible;");
             links.setAttribute("style", "transform:translateX(0);");
+            document.getElementById('dropDown').setAttribute("style", "display:none;");
         } else {
             setCheckWidthState(true);
             header.setAttribute("style", "overflow:visible;");
             links.setAttribute("style", "transform:translateX(110%);");
+            document.getElementById('dropDown').setAttribute("style", "display:flex;");
         }
+        // setIconState(true);
 
     }
     function handelNavigate(url) {
@@ -87,17 +104,20 @@ const Header = () => {
 
     }
 
+    // console.log(pathname);
+    if (pathname === "/login") return null;
     return (
         <header className='header'>
-            <div className='logo'>
+            <div className='logo' onClick={() => navigate('/')}>
                 <img src={assets.logo} alt='logo' />
             </div>
-            <div className='links'>
+            <div className={`links ${darkMode == 'light' ? '' : 'dark-bg'}`}>
                 <ul>
+                    {/* {t('Book Appointment With Trusted Doctors')} */}
                     {
                         links.map((item, i) => (
-                            <NavLink key={i} to={item.url}>
-                                <li> {item.text} </li>
+                            <NavLink className={`${darkMode == 'light' ? '' : 'dark-title'}`} key={i} to={item.url} onClick={() => { setIconState(!iconState); showLinks(); }} >
+                                <li>{t(item.text)}</li>
                                 <hr />
                             </NavLink>
                         ))
@@ -108,29 +128,36 @@ const Header = () => {
                 {
                     registrationStatus ?
                         <>
-                            <img src={assets.profile_pic} alt='profile image' className='profileImg' />
-                            <img src={assets.dropdown_icon} alt='dropdown' className='profileDropdown' onClick={() => ShowdropDown()} />
-                            <ul className='dropDown'>
+                            <div onClick={() => ShowdropDown()} style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                gap: '4px'
+                            }} id='dropDown'>
+                                <img src={userData.image} alt='profile image' className='profileImg' />
+                                <img src={assets.dropdown_icon} alt='dropdown' className='profileDropdown' />
+                            </div>
+                            <ul className={`dropDown ${darkMode == 'light' ? '' : 'dark-window dark-section-title'} ${language == 'ar' ? 'leftH' : 'rightH'}`}>
                                 {
                                     profileDrop.map((item, i) => (
-                                        <li key={i} onClick={() => handelNavigate(item.url)}  > {item.text} </li>
+                                        <li key={i} onClick={() => handelNavigate(item.url)}> {t(item.text)} </li>
                                     ))
                                 }
                             </ul>
                             <div className='bar' onClick={() => showLinks()}>
-                                <BarsIcon />
+                                <BarsIcon close={iconState} />
                             </div>
                         </>
                         : <>
-                            <button onClick={() => navigate('/login')}>Create acount</button>
-                            <div className='bar' onClick={() => showLinks()}>
-                                <BarsIcon />
+                            <button onClick={() => navigate('/login')} className={`${darkMode == 'light' ? '' : 'light-title'}`}>{t('Create acount')}</button>
+                            <div className='bar' onClick={() => { showLinks(); }}>
+                                <BarsIcon close={iconState} />
                             </div>
                         </>
                 }
 
             </div>
-        </header>
+        </header >
     )
 }
 

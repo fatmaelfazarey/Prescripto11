@@ -14,12 +14,21 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden !important;
+}
+
 :root {
     --primary: #5F6FFF;
-    --dark: #1F2937;
+    --dark-bg: #121212;
+    --dark-window: #202020;
+    --dark-title: #E6E6E6;
+    --dark-section-title: #D5D5D5;
+    --dark-sub-title: #7C7C7C;
     --logo: #000B6D;
     --transition: all .3s;
-    --sub-title:rgba(75, 85, 99, 1);
+    --sub-title: rgba(75, 85, 99, 1);
+    --text-zinc-600: rgb(82 82 91);
 
 }
 
@@ -45,6 +54,19 @@ ul {
     max-width: 1200px;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 /*  SCREEN */
 @media (max-width:990px) {
     .container {
@@ -68,7 +90,7 @@ ul {
     }
 } */
 
-button {
+button:not(.explore, .myAppointment button) {
     border: none;
     outline: none;
     width: fit-content;
@@ -81,12 +103,12 @@ button {
 
 }
 
-button:hover {
+button:not(.explore, .myAppointment button):hover {
     transform: scale(1.04);
 }
 
 @media (max-width:490px) {
-    button {
+    button:not(.booking .saveAppo, .explore, .profile .btns>button, .myAppointment button, .home button) {
         padding: 10px 10px;
         font-size: 12px;
     }
@@ -105,7 +127,7 @@ button:hover {
     font-weight: 400;
     line-height: 27px;
     color: var(--sub-title);
-    text-align: center;
+    /* text-align: center; */
     margin: 20px auto 50px auto;
 
 }
@@ -161,4 +183,59 @@ button:hover {
 
 .logo img {
     width: 100%;
+}
+
+
+.page-title {
+    font-size: 24px;
+    line-height: 36px;
+    color: rgb(112 112 112);
+    font-weight: 400;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.page-title>span {
+    color: rgb(55 65 81);
+    font-weight: 600;
+}
+
+hr {
+    background-color: rgb(161 161 170);
+    height: 1px;
+    border: none;
+}
+
+
+/*  --primary: #5F6FFF; */
+.primary-bg {
+    background-color: var(--primary) !important;
+}
+
+.dark-bg {
+    background-color: var(--dark-bg) !important;
+}
+
+.dark-window {
+    background-color: var(--dark-window) !important;
+}
+
+.dark-title {
+    color: var(--dark-title) !important;
+}
+
+.dark-section-title {
+    color: var(--dark-section-title) !important;
+}
+
+.dark-sub-title {
+    color: var(--dark-sub-title) !important;
+}
+
+.light-title {
+    color: var(--dark-bg) !important;
+}
+
+.light-sub-title {
+    color: var(--dark-window) !important;
 }

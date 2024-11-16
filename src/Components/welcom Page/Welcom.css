@@ -11,7 +11,7 @@
 }
 
 .home .welcom {
-    padding: 0 10px 0 20px;
+    padding: 0 50px 0 50px;
     background-color: var(--primary);
     border-radius: 12px;
     display: flex;
@@ -61,7 +61,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
-
 }
 
 .home .welcom .left .imgs>img {
@@ -100,11 +99,12 @@
 }
 
 .home .welcom .right {
-    width: 55%;
-    min-width: 550px;
+    /* width: 55%;
+    min-width: 550px; */
+    width: 530px;
     position: absolute;
     bottom: -4px;
-    right: 40px;
+    /* right: 40px; */
 
 }
 
@@ -123,8 +123,8 @@
     }
 
     .home .welcom .right {
-        width: 50%;
-        right: 0px;
+        /* width: 50%; */
+        /* right: 0px; */
         display: flex;
         justify-content: flex-end;
         bottom: 0px;
@@ -155,9 +155,11 @@
     }
 
     .home .welcom>.left {
-        width: 100%;
+        width: 85%;
+        align-items: center;
         text-align: center;
         padding: 30px;
+        gap: 15px;
     }
 
     .bookAppointmentBtn {
@@ -165,14 +167,33 @@
     }
 
     .home .welcom .flexImgText {
-        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        gap: 5px;
 
     }
 
+    .home .welcom .left h3 {
+        font-size: 30px;
+        line-height: 27px;
+    }
+
+    .home .welcom .left p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
     .home .welcom .right {
-        width: 100%;
+        /* width: 100%; */
         justify-content: center;
-        min-width: 300px;
+        /* min-width: 300px; */
+        /* margin: auto; */
+        right: 50%;
+        max-width: 500px;
+        min-width: 330px;
+        transform: translateX(50%);
+        width: 100%;
+
     }
 
     .home .welcom .right img {
@@ -182,16 +203,28 @@
 
 @media (max-width:550px) {
     .home .welcom>.left {
-        padding: 80px 10px;
+        width: 100%;
+        padding: 40px 10px;
     }
 
     .home .welcom .left h3 {
-        font-size: 35px;
         min-width: 0;
+        line-height: 30px;
 
     }
 
     .home .welcom .right img {
-        width: 100%;
+        /* width: 100%; */
+        width: 90%;
+
     }
+}
+
+.rightRLT {
+    right: 20px;
+}
+
+.leftRLT {
+    right: 100%;
+    transform: translateX(103%);
 }

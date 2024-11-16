@@ -13,7 +13,7 @@ import verified_icon from './verified_icon.svg'
 import arrow_icon from './arrow_icon.svg'
 import info_icon from './info_icon.svg'
 import upload_icon from './upload_icon.png'
-import stripe_logo from './stripe_logo.png'
+import stripe_logo from './stripe.png'
 import razorpay_logo from './razorpay_logo.png'
 import doc1 from './doc1.png'
 import doc2 from './doc2.png'
@@ -39,6 +39,8 @@ import Pediatricians from './Pediatricians.svg'
 import group_img_1 from './group_img_1.jpg'
 import group_img_2 from './group_img_2.jpg'
 import group_img_3 from './group_img_3.jpg'
+import upload_area from './upload_area.png'
+import notFound from './Detective-check-footprint.png'
 
 export const assets = {
     appointment_img,
@@ -60,16 +62,20 @@ export const assets = {
     razorpay_logo,
     group_img_1,
     group_img_2,
-    group_img_3
+    group_img_3,
+    upload_area,
+    notFound,
+    doc1,
+    doc3
 }
 export const company = [
     {
         title: 'Home',
-        url: '',
+        url: '/',
     },
     {
         title: 'About us',
-        url: '',
+        url: '/about',
     },
     {
         title: 'Delivery',
@@ -83,7 +89,9 @@ export const company = [
 export const getInTouch = [
     {
         title: 'Phone',
-        url: '+201156267730',
+
+
+        url: 'https://wa.me/201156267730',
     },
     {
         title: 'GitHub',
@@ -95,12 +103,13 @@ export const getInTouch = [
     },
     {
         title: 'Email',
-        url: 'fatmamohamed58001@gmail.com'
+        url: 'mailto:fatmamohamed58001@gmail.com'
     }
 ]
 // export const logoimg = <img src={logo} />;
 
 export const specialityData = [
+
     {
         speciality: 'General physician',
         image: General_physician
@@ -109,6 +118,7 @@ export const specialityData = [
         speciality: 'Gynecologist',
         image: Gynecologist
     },
+
     {
         speciality: 'Dermatologist',
         image: Dermatologist
@@ -202,7 +212,7 @@ export const doctors = [
         _id: 'doc6',
         name: 'Dr. Andrew Williams',
         image: doc6,
-        speciality: 'Neurologist',
+        speciality: 'Gastroenterologist',
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
@@ -286,7 +296,7 @@ export const doctors = [
         _id: 'doc12',
         name: 'Dr. Patrick Harris',
         image: doc12,
-        speciality: 'Neurologist',
+        speciality: 'Gastroenterologist',
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',

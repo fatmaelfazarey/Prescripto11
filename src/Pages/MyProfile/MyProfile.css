@@ -1,0 +1,131 @@
+.profile {
+    padding: 20px 0;
+}
+
+.profile img {
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.profile .name {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(31, 41, 55, 1);
+    margin-bottom: 10px;
+    line-height: 40.32px;
+    width: fit-content;
+}
+
+.profile u {
+    color: rgba(121, 121, 121, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.16px;
+    margin: 20px 0px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.profile .flex {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0px;
+}
+
+.profile .flex>:first-child {
+    max-width: 130px;
+    min-width: 100px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.68px;
+}
+
+.profile .linkText {
+    color: rgb(59 130 246);
+}
+
+.profile .address {
+    margin: 4px 0px;
+}
+
+.modeIcon {
+    width: 60px;
+    height: 25px;
+    background-color: rgb(216, 213, 213);
+    border-radius: 30px;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset, rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+}
+
+.modeIcon::after {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: rgb(255, 255, 255);
+    z-index: 12;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: var(--transition);
+    box-shadow: rgb(0 0 0 / 50%) 0px 1px 4px;
+}
+
+.modeIcon-clicked {
+    background-color: rgb(59 130 246);
+}
+
+.modeIcon-clicked::after {
+    left: calc(100% - 21px);
+}
+
+.profile .btns>button {
+    background-color: transparent !important;
+    border: 1px solid rgba(121, 121, 121, 1);
+    margin: 20px 0;
+    transition: var(--transition);
+}
+
+.profile .btns>button:hover {
+    background-color: var(--primary) !important;
+    color: white;
+    transform: scale(1.04);
+
+}
+
+.profile input {
+    background-color: rgb(249 250 251);
+    border: 1px solid rgb(249 250 251);
+}
+
+.profile select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.profile #uploadImg {
+    position: relative;
+}
+
+.profile #uploadImg::after {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-image: url(../../assets/uploadImg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 50%;
+    transform: translate(7%, 50%);
+
+}

@@ -26,7 +26,7 @@
 
 .header .links ul a {
     font-family: "Poppins", sans-serif;
-    color: var(--dark);
+    color: #121212;
     font-weight: 500;
     transition: all .2s;
     cursor: pointer;
@@ -44,7 +44,7 @@
 }
 
 .header .links .active {
-    color: var(--primary)
+    color: var(--primary) !important;
 }
 
 .header .links .active hr {
@@ -53,7 +53,7 @@
 
 .header button {
     background-color: var(--primary);
-    color: white;
+    color: white !important;
 }
 
 @media (max-width:490px) {
@@ -77,11 +77,14 @@
         position: absolute;
         background-color: rgb(255, 255, 255);
         padding: 20px;
-        top: 100%;
-        right: 0;
+        top: 99%;
+        right: -13px;
         transform: translateX(110%);
         transition: var(--transition);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+        z-index: 100;
+        width: 108%;
+        height: 100vh;
     }
 
     .header .links ul {
@@ -102,12 +105,12 @@
 }
 
 .header .profileImg {
-    width: 46px;
+    width: 40px;
     border-radius: 50%;
 }
 
 .header .profileDropdown {
-    width: 20px;
+    width: 15px;
     transition: var(--transition);
 }
 
@@ -116,9 +119,9 @@
     z-index: 100;
     background-color: rgb(251, 251, 251);
     top: calc(100% + 10px);
-    right: 0px;
+    /* right: 0px; */
     /* padding: 10px; */
-    width: 150px;
+    width: 180px;
     height: 0px;
     overflow: hidden;
     transition: var(--transition);
@@ -128,6 +131,20 @@
 }
 
 .header .dropDown li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.header .dropDown li:hover {
+    color: var(--primary);
+}
+
+/* To handle RTL */
+.leftH {
+    left: 0;
+}
+
+.rightH {
+    right: 0;
 }

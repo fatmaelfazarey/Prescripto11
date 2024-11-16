@@ -1,10 +1,12 @@
 import React from 'react'
+import DocWithId from '../Components/Appointment/DocWithId'
 
 const Appointment = () => {
     return (
-        <div>
-            <h1>Appointment</h1>
-        </div>
+        <>
+            <DocWithId />
+
+        </>
     )
 }
 

@@ -73,4 +73,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### install react-router-dom 
 npm install react-router-dom 
 
-###  npm install axios react-toastify   
+###  npm install axios react-toastify  
+
+### search for that useLocation vs useParams
+### npm i usehooks-ts 
+    to use useLocalStorage
+
+### npm install react-i18next i18next --save
+   To support multiple languages
+### npm install i18next-browser-languagedetector  fro this repo https://github.com/i18next/i18next-browser-languageDetector
+    To detect which language you use now
+
+### npm install i18next-http-backend    fro this repo https://github.com/i18next/i18next-http-backend
+    to load json file from back end or loacl host any where  
