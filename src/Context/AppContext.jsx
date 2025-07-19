@@ -21,7 +21,7 @@ const AppContextProvider = (props) => {
         gender: 'Female',
         dob: '2001-11-11'
     });
-    const [registrationStatus, setRegistrationStatus] = useState(true);
+    const [registrationStatus, setRegistrationStatus] = useState(false);
     const [appointmentWithDocId, setAppointmentWithDocId] = useState([{
         _id: 'doc1',
         name: 'Dr. Richard James',
