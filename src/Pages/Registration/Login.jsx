@@ -42,9 +42,9 @@ const Login = () => {
                     login ?
                         <p className={`${darkMode == 'light' ? '' : 'dark-sub-title'}`}>Don't have an account? <u className='link' onClick={() => setLogin(!login)}>Create account</u></p> :
                         <p className={`${darkMode == 'light' ? '' : 'dark-sub-title'}`}>Already have an account? <u className='link' onClick={() => setLogin(!login)}>Login here</u></p>
-
-
                 }
+                <p className={`${darkMode == 'light' ? '' : 'dark-sub-title'}`}>Admin Login ? <u className='link'><a href='https://prescripto-dashboard-v02-redskaphh-fatmaelfazareys-projects.vercel.app/'> Login here</a></u></p>
+
             </form>
         </section>
     )
