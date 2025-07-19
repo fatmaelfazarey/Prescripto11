@@ -1,4 +1,4 @@
-# Prescripto11 🩺
+# Prescripto 🩺
 
 **Prescripto11** is a medical booking platform that helps users browse a list of doctors across various specialties, create accounts, and book appointments with ease. It also includes an admin dashboard that allows administrators to manage doctor data, view site statistics, track patient records, and handle all appointments.
 
